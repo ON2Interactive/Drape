@@ -1,6 +1,9 @@
-const API_KEY = "AIzaSyAhmIbo09mJU4zwau2uA5jTsDqpStEOI6k";
+const API_KEY = process.env.GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY;
 
 async function test(imagePayload) {
+    if (!API_KEY) {
+        throw new Error("Missing GEMINI_API_KEY (or VITE_GEMINI_API_KEY) in environment.");
+    }
     const fetch = require('node-fetch'); // ensuring node-fetch or native is used, actually node 18+ has fetch natively
     // We will just use native fetch if available
     

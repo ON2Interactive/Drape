@@ -1,10 +1,10 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "AIzaSyAhmIbo09mJU4zwau2uA5jTsDqpStEOI6k";
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const STYLIST_MODEL = import.meta.env.VITE_GEMINI_STYLIST_MODEL || import.meta.env.VITE_GEMINI_SPECIALIST_MODEL || "gemini-2.5-flash";
-const genAI = new GoogleGenerativeAI(API_KEY);
+const genAI = API_KEY ? new GoogleGenerativeAI(API_KEY) : null;
 
-const stylistModel = genAI.getGenerativeModel({
+const stylistModel = genAI?.getGenerativeModel({
     model: STYLIST_MODEL,
 });
 

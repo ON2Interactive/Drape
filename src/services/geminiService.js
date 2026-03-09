@@ -2,8 +2,8 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Note: In a production app, the API key should be handled via a secure backend
 // or environment variables. For now, we'll look for it in the environment.
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "AIzaSyAhmIbo09mJU4zwau2uA5jTsDqpStEOI6k";
-const genAI = new GoogleGenerativeAI(API_KEY);
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const genAI = API_KEY ? new GoogleGenerativeAI(API_KEY) : null;
 
 const DEFAULT_MODEL = import.meta.env.VITE_GEMINI_MODEL || "gemini-1.5-flash-latest";
 const PROFILE_IMAGE_MODEL = import.meta.env.VITE_GEMINI_PROFILE_MODEL || "gemini-2.5-flash-image";
@@ -23,23 +23,23 @@ const REMIX_SCENES = [
     "a rooftop terrace at golden hour overlooking a modern city skyline"
 ];
 
-const model = genAI.getGenerativeModel({
+const model = genAI?.getGenerativeModel({
     model: DEFAULT_MODEL,
 });
 
-const outfitModel = genAI.getGenerativeModel({
+const outfitModel = genAI?.getGenerativeModel({
     model: OUTFIT_MODEL,
 });
 
-const remixModel = genAI.getGenerativeModel({
+const remixModel = genAI?.getGenerativeModel({
     model: REMIX_MODEL,
 });
 
-const profileImageModel = genAI.getGenerativeModel({
+const profileImageModel = genAI?.getGenerativeModel({
     model: PROFILE_IMAGE_MODEL,
 });
 
-const profileImageFallbackModel = genAI.getGenerativeModel({
+const profileImageFallbackModel = genAI?.getGenerativeModel({
     model: "gemini-2.5-flash-image",
 });
 

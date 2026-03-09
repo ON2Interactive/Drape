@@ -1,4 +1,4 @@
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "AIzaSyAhmIbo09mJU4zwau2uA5jTsDqpStEOI6k";
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const PRIMARY_VEO_MODEL = import.meta.env.VITE_VEO_MODEL || "veo-2.0-generate-001";
 const BASE_URL = "https://generativelanguage.googleapis.com/v1beta";
 
