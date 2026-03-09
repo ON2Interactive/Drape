@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[66418],{66418:(e,t,h)=>{h.r(t),h.d(t,{__iconNode:()=>k,default:()=>l});var c=h(55129);let k=[["rect",{x:"5",y:"2",width:"14",height:"20",rx:"7",key:"11ol66"}],["path",{d:"M12 6v4",key:"16clxf"}]],l=(0,c.A)("mouse",k)}}]);

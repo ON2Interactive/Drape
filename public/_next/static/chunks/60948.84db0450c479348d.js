@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[60948],{60948:(e,d,t)=>{t.r(d),t.d(d,{__iconNode:()=>h,default:()=>k});var a=t(55129);let h=[["path",{d:"M21 12H11",key:"wd7e0v"}],["path",{d:"M21 18H11",key:"4wu86t"}],["path",{d:"M21 6H11",key:"6dy1d6"}],["path",{d:"m7 8-4 4 4 4",key:"o5hrat"}]],k=(0,a.A)("indent-decrease",h)}}]);

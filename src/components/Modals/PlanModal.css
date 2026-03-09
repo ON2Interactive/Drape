@@ -1,0 +1,157 @@
+.plan-modal {
+    width: min(92vw, 1200px);
+    max-width: 1200px;
+}
+
+.plan-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.plan-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.plan-generate-btn {
+    border: 1px solid var(--border-primary);
+    background: transparent;
+    color: var(--text-primary);
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.01rem;
+}
+
+.plan-generate-btn:hover:not(:disabled) {
+    border-color: var(--text-secondary);
+}
+
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.plan-error {
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+}
+
+.plan-presets {
+    display: flex;
+    gap: 0.45rem;
+    margin-bottom: 0.9rem;
+}
+
+.plan-preset-btn {
+    border: 1px solid var(--border-primary);
+    background: transparent;
+    color: var(--text-secondary);
+    padding: 0.32rem 0.6rem;
+    font-size: 0.74rem;
+    letter-spacing: 0.01rem;
+}
+
+.plan-preset-btn.active {
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+
+.plan-preset-btn:hover:not(:disabled) {
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+
+.plan-card {
+    cursor: default;
+}
+
+.plan-card.is-ready {
+    cursor: pointer;
+}
+
+.plan-day {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.plan-day-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.45rem;
+}
+
+.plan-thumb {
+    aspect-ratio: 4 / 5;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.plan-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.plan-empty {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: var(--text-muted);
+    font-size: 0.74rem;
+}
+
+.plan-card-actions {
+    margin-top: 0.35rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.plan-icon-btn {
+    border: 1px solid var(--border-primary);
+    background: transparent;
+    color: var(--text-secondary);
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan-icon-btn:hover:not(:disabled) {
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+
+.plan-icon-btn.is-locked {
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+    .plan-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 740px) {
+    .plan-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .plan-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

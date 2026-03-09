@@ -1,0 +1,109 @@
+.profile-modal {
+    max-width: 500px;
+    text-align: center;
+}
+
+.profile-modal h2 {
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+    line-height: 1.1;
+    text-transform: none;
+}
+
+.photo-upload-zone {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border: 1px solid var(--border-primary);
+    background: var(--bg-secondary);
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    transition: border-color 0.3s;
+    position: relative;
+}
+
+.photo-upload-zone:hover {
+    border-color: var(--text-primary);
+}
+
+.photo-upload-zone.processing {
+    border-color: #555;
+    cursor: wait;
+}
+
+.processing-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    gap: 1rem;
+    z-index: 10;
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #FFFFFF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.upload-placeholder {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    gap: 1rem;
+}
+
+.upload-placeholder .plus {
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.photo-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-actions button {
+    flex: 1;
+}
+
+.save-profile-btn {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border: none;
+    padding: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.save-profile-btn:hover {
+    opacity: 0.9;
+}
+
+.save-profile-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

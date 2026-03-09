@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[54855],{54855:(e,t,h)=>{h.r(t),h.d(t,{__iconNode:()=>c,default:()=>k});var r=h(55129);let c=[["rect",{width:"8",height:"6",x:"5",y:"4",rx:"1",key:"nzclkv"}],["rect",{width:"8",height:"6",x:"11",y:"14",rx:"1",key:"4tytwb"}]],k=(0,r.A)("ungroup",c)}}]);

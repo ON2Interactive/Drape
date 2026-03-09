@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* MagXStudio Technical Minimalist Palette */
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #1a1a1a;
+
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-muted: #666666;
+
+  --border-primary: #333333;
+  --border-secondary: #222222;
+
+  --accent: #ffffff;
+
+  --smooth-transitions: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-speed: 0.3s;
+
+  font-family: Helvetica, 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Super Clean: No rounded corners unless specified */
+  border-radius: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Minimalist Containers */
+.glass-card {
+  background: var(--bg-primary);
+  /* Solid Black */
+  border: 1px solid var(--border-primary);
+  padding: 3rem;
+  box-shadow: none;
+  position: relative;
+}
+
+/* Global Modal Overlay - Solid Black */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000;
+  /* Absolute Solid Black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Global Close Button Standard - Pinned to screen top-right */
+.close-btn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  /* Balanced scale */
+  font-weight: 300;
+  cursor: pointer;
+  line-height: 1;
+  padding: 1rem;
+  z-index: 2000;
+  transition: opacity 0.2s;
+}
+
+.close-btn:hover {
+  opacity: 0.5;
+}
+
+/* Typography */
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 18px;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Form Elements & Buttons */
+button {
+  background: transparent;
+  color: var(--text-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition-speed) var(--smooth-transitions);
+  letter-spacing: 0.01em;
+}
+
+
+button:hover {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: none;
+  opacity: 0.7;
+}
+
+button.secondary:hover {
+  opacity: 1;
+}
+
+select,
+input {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  padding: 0.75rem;
+  font-family: inherit;
+}
+
+/* Hide Bloom effects from previous version */
+.bloom {
+  display: none !important;
+}
+
+/* Global Utility for Icons: Light to Dark on Hover */
+.action-icon {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: color var(--transition-speed) var(--smooth-transitions);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-icon:hover {
+  color: var(--text-muted);
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Drape</title>
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/pages/drape/drape-logo-override.css" />
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #000; color: #fff; }
+      a { color: inherit; text-decoration: none; }
+      .page { min-height: 100vh; display: flex; flex-direction: column; }
+      .main { flex: 1; width: 100%; max-width: 1100px; margin: 0 auto; padding: 200px 20px 96px; }
+      h1 { margin: 0 0 40px; font-size: 48px; line-height: 1.05; font-weight: 700; letter-spacing: -0.04em; }
+      .intro { margin: 0 0 40px; max-width: 720px; color: rgba(255,255,255,0.5); font-size: 16px; line-height: 1.7; }
+      form { max-width: 720px; display: grid; gap: 32px; }
+      label { display: block; margin-bottom: 8px; color: rgba(255,255,255,0.6); font-size: 14px; font-weight: 500; }
+      input, textarea {
+        width: 100%; border: 0; border-bottom: 1px solid #5c626f; background: transparent; color: rgba(255,255,255,0.92);
+        font: inherit; padding: 8px 0; outline: none; border-radius: 0;
+      }
+      input { height: 48px; }
+      textarea { min-height: 120px; resize: vertical; }
+      input::placeholder, textarea::placeholder { color: #8f96a3; }
+      input:focus, textarea:focus { border-bottom-color: #8a92a0; }
+      .actions { padding-top: 32px; display: flex; justify-content: flex-end; }
+      .send {
+        display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 0; border-radius: 999px;
+        background: #fff; color: #000; cursor: pointer; transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      .send:hover { opacity: 0.9; }
+      .send:active { transform: scale(0.96); }
+      .send svg { width: 24px; height: 24px; stroke-width: 2.5; }
+      @media (max-width: 768px) { .main { padding-top: 168px; } h1 { font-size: 40px; } .intro { font-size: 15px; } }
+    </style>
+  </head>
+  <body>
+    <header class="common-pill-nav-wrap"><div class="common-pill-nav"><a href="/" class="common-pill-nav-brand" aria-label="Drape home"><img src="/drape-logo.svg" alt="Drape" class="common-pill-nav-logo" /></a><nav class="common-pill-nav-links"><a href="/pages/drape/pricing.html">Pricing</a><a href="/pages/drape/faqs.html">FAQs</a><a href="/pages/drape/contact.html">Contact</a></nav><a class="common-pill-nav-cta" href="/pages/drape/signup.html">Get Started</a></div></header>
+    <div class="page">
+      <main class="main">
+        <h1>Contact</h1>
+        <p class="intro">Questions, feedback, or support requests. Send us a message.</p>
+        <form onsubmit="event.preventDefault(); const name=document.getElementById('name').value; const email=document.getElementById('email').value; const subject=document.getElementById('subject').value || 'Contact from Drape'; const message=document.getElementById('message').value; const body='Name: '+name+'\nEmail: '+email+'\n\n'+message; window.open('mailto:hello@drape.cloud?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body), '_blank');">
+          <div><label for="name">Name</label><input id="name" placeholder="Your name" /></div>
+          <div><label for="email">Email</label><input id="email" type="email" placeholder="Your email address" /></div>
+          <div><label for="subject">Subject</label><input id="subject" placeholder="How can we help?" /></div>
+          <div><label for="message">Message</label><textarea id="message" rows="6" placeholder="Your message details..."></textarea></div>
+          <div class="actions"><button class="send" type="submit" aria-label="Send message" title="Send message"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 7-7 7 7"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5"/></svg></button></div>
+        </form>
+      </main>
+      <footer class="landing-footer"><div class="landing-footer-grid"></div><div class="landing-footer-content"><a href="/" class="landing-footer-logo-link"><img src="/drape-logo.svg" alt="Drape" class="landing-footer-logo" /></a><nav class="landing-footer-nav"><a href="/pages/drape/signup.html">Sign Up</a><a href="/pages/drape/pricing.html">Pricing</a><a href="/pages/drape/faqs.html">FAQs</a><a href="/pages/drape/blog.html">Blog</a><a href="/pages/drape/help.html">Help</a><a href="/pages/drape/contact.html">Contact</a><a href="/pages/drape/privacy.html">Privacy</a><a href="/pages/drape/terms.html">Terms</a></nav><div class="landing-footer-copy">© 2026 Drape. All rights reserved.</div></div></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[72802],{72802:(e,t,h)=>{h.r(t),h.d(t,{__iconNode:()=>k,default:()=>r});var a=h(55129);let k=[["path",{d:"m2 8 2 2-2 2 2 2-2 2",key:"sv1b1"}],["path",{d:"m22 8-2 2 2 2-2 2 2 2",key:"101i4y"}],["rect",{width:"8",height:"14",x:"8",y:"5",rx:"1",key:"1oyrl4"}]],r=(0,a.A)("vibrate",k)}}]);

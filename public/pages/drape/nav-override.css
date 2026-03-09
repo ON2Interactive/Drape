@@ -1,0 +1,55 @@
+nav.fixed.left-0.top-0 {
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999 !important;
+  padding: 18px 16px !important;
+  background: rgba(0, 0, 0, 0.72) !important;
+  backdrop-filter: blur(8px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+nav.fixed.left-0.top-0 a.flex.items-center {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+}
+
+nav.fixed.left-0.top-0 a.flex.items-center svg {
+  display: none !important;
+}
+
+nav.fixed.left-0.top-0 a.flex.items-center::before {
+  content: "MagXStudio";
+  color: #fff;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+nav.fixed.left-0.top-0 .flex.items-center.gap-8 {
+  gap: 24px !important;
+}
+
+nav.fixed.left-0.top-0 .flex.items-center.gap-8 a {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-size: 18px !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+nav.fixed.left-0.top-0 .flex.items-center.gap-8 a:hover {
+  color: #fff !important;
+}
+
+@media (max-width: 900px) {
+  nav.fixed.left-0.top-0 a.flex.items-center::before {
+    font-size: 22px;
+  }
+
+  nav.fixed.left-0.top-0 .flex.items-center.gap-8 a {
+    font-size: 14px !important;
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[35632],{35632:(e,a,h)=>{h.r(a),h.d(a,{__iconNode:()=>_,default:()=>k});var s=h(55129);let _=[["path",{d:"M2 20h.01",key:"4haj6o"}]],k=(0,s.A)("signal-zero",_)}}]);

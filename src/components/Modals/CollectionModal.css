@@ -1,0 +1,53 @@
+.collection-modal {
+    max-width: 1100px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-primary);
+}
+
+.modal-header-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.modal-header-flex h2 {
+    margin-bottom: 0;
+}
+
+.add-item-plus {
+    font-size: 2.5rem;
+    font-weight: 200;
+    line-height: 1;
+    transition: opacity 0.2s;
+}
+
+.add-item-plus:hover {
+    opacity: 0.5;
+}
+
+.modal-scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    background: var(--bg-primary);
+    border: none;
+}
+
+/* Adjust nested collection grid padding for inside modal */
+.collection-modal .collection-grid {
+    grid-template-columns: repeat(auto-fill, 100px);
+    gap: 20px;
+}
+
+.collection-modal .clothing-thumbnail {
+    width: 100px;
+    height: 100px;
+}
+
+.collection-modal .clothing-thumbnail img {
+    width: 100px;
+    height: 100px;
+}

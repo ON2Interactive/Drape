@@ -1,0 +1,724 @@
+/* Replace nav brand logo with Drape logo (works after hydration) */
+nav a.flex.items-center.gap-2 {
+  position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  min-width: 36px;
+  min-height: 24px;
+}
+
+nav a.flex.items-center.gap-2 > * {
+  opacity: 0 !important;
+}
+
+nav a.flex.items-center.gap-2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url('/drape-logo.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.common-pill-nav-wrap {
+  position: fixed;
+  top: 24px;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.common-pill-nav {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px 18px 12px 22px;
+  background: rgba(63, 63, 68, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(14px);
+}
+
+.common-pill-nav-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.common-pill-nav-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.common-pill-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-left: auto;
+}
+
+.common-pill-nav-links a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.common-pill-nav-links a:hover {
+  color: #fff;
+}
+
+.common-pill-nav-cta {
+  min-width: 160px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Replace footer logo mark with Drape logo */
+footer a.mb-12.inline-block {
+  position: relative;
+  display: inline-block !important;
+  width: 60px;
+  height: 60px;
+}
+
+footer a.mb-12.inline-block > * {
+  opacity: 0 !important;
+}
+
+footer a.mb-12.inline-block::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/drape-logo.svg') no-repeat center center;
+  background-size: contain;
+}
+
+footer.relative.bg-black,
+footer.relative.bg-black.py-40.px-5.overflow-hidden.border-t.border-white\/5 {
+  background: #17171a !important;
+}
+
+.landing-footer {
+  position: relative;
+  overflow: hidden;
+  background: #17171a !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 120px 24px 80px;
+}
+
+.landing-footer-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.landing-footer-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.landing-footer-logo-link {
+  display: inline-block;
+  margin-bottom: 36px;
+}
+
+.landing-footer-logo {
+  width: 60px;
+  height: auto;
+  display: block;
+}
+
+.landing-footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 72px;
+}
+
+.landing-footer-nav a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.landing-footer-nav a:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.landing-footer-nav a:active {
+  transform: scale(0.95);
+}
+
+.landing-footer-copy {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.drape-longform-page main.flex-1.mx-auto.w-full.max-w-\[1100px\],
+.drape-longform-page main.flex-1.mx-auto.w-full.max-w-4xl {
+  max-width: 1100px !important;
+}
+
+.drape-longform-page main h1.text-4xl.md\:text-5xl.font-bold.tracking-tight,
+.drape-longform-page main h1.text-4xl.md\:text-5xl.font-bold.tracking-tight.text-white {
+  margin-bottom: 40px !important;
+}
+
+.drape-longform-page main .space-y-12 > div,
+.drape-longform-page main form.max-w-2xl,
+.drape-longform-page main .max-w-2xl {
+  width: 100% !important;
+  max-width: 1100px !important;
+}
+
+/* Swap the copied landing hero to the Drape background image */
+.hero-section .hero-bg {
+  background-image: url('/Assets/Hero-BG.png') !important;
+}
+
+.hero-section .hero-content h1 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.hero-section .hero-content::before {
+  content: 'Drape -Your Personal AI Fashion Stylist & Wardrobe Assistant';
+  display: block;
+  max-width: 960px;
+  margin: 0 auto 1.5rem;
+  color: #fff;
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+.hero-section .hero-content .flex.justify-center a {
+  position: relative;
+  min-width: 250px;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.hero-section .hero-content .flex.justify-center a::after {
+  content: 'Get Started';
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-indent: 0;
+  white-space: nowrap;
+}
+
+.hero-section .hero-content p {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  color: transparent !important;
+}
+
+.hero-section .hero-content p::after {
+  content: 'AI styling, outfit planning, and try-ons built around your collection.';
+  position: absolute;
+  inset: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.editor-preview-section h2 {
+  position: relative;
+  color: transparent !important;
+}
+
+.editor-preview-section h2::after {
+  content: 'Intelligent Try On';
+  position: absolute;
+  inset: 0;
+  color: #fff;
+}
+
+.editor-preview-section .editor-preview-img .relative.overflow-hidden {
+  background-image: url('/Assets/UI.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.editor-preview-section .editor-preview-img img {
+  opacity: 0 !important;
+}
+
+.editor-preview-section .editor-preview-img::after {
+  content: 'Style with intention using the path that fits the moment. Create realistic looks with Intelligent Try On, generate fresh combinations with Drape Remix, direct the outcome with Drape Prompt, or speak with Drape Stylist for live collection-based guidance. Save generated looks to favourites, download what works, and share standout outfits when you are ready.';
+  display: block;
+  max-width: 980px;
+  margin: 2rem auto 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.pillars-section .grid > div h3,
+.pillars-section .grid > div p {
+  position: relative;
+  color: transparent !important;
+}
+
+.pillars-section .grid > div h3::after,
+.pillars-section .grid > div p::after {
+  position: absolute;
+  inset: 0;
+}
+
+.pillars-section .grid > div:nth-child(1) h3::after {
+  content: 'Intelligent Try On';
+  color: #fff;
+}
+
+.pillars-section .grid > div:nth-child(1) p::after {
+  content: 'Upload your profile, select items from your collection, and generate realistic outfit previews built around pieces you actually own.';
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pillars-section .grid > div:nth-child(2) h3::after {
+  content: 'Drape Remix';
+  color: #fff;
+}
+
+.pillars-section .grid > div:nth-child(2) p::after {
+  content: 'Use the magic wand to instantly remix selected collection items into a fresh styled look without writing a prompt.';
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pillars-section .grid > div:nth-child(3) h3::after {
+  content: 'Drape Stylist';
+  color: #fff;
+}
+
+.pillars-section .grid > div:nth-child(3) p::after {
+  content: 'Talk to your live AI stylist for outfit guidance, collection-based recommendations, and generated looks tailored to the occasion.';
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pillars-section .grid > div:nth-child(4) h3::after {
+  content: 'Drape Plan';
+  color: #fff;
+}
+
+.pillars-section .grid > div:nth-child(4) p::after {
+  content: 'Auto-generate a weekly wardrobe plan from your collection so you can map out wearable looks from Monday through Sunday.';
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.features-grid-section .max-w-7xl.mx-auto {
+  position: relative;
+  padding-top: 5rem;
+  max-width: 1100px !important;
+}
+
+.features-grid-section .max-w-7xl.mx-auto::before {
+  content: 'How It Works';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  font-size: clamp(1.875rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 4rem !important;
+  max-width: 720px;
+  margin-top: 20px !important;
+}
+
+.trusted-by-section {
+  display: none !important;
+}
+
+.session-section .max-w-4xl.mx-auto {
+  max-width: 1100px !important;
+}
+
+.session-section h2,
+.session-section p {
+  position: relative;
+  color: transparent !important;
+}
+
+.session-section h2::after,
+.session-section p::after {
+  display: block;
+  position: relative;
+}
+
+.session-section h2::after {
+  content: 'Cloud-Based Workflow. No Software Downloads.';
+  color: #fff;
+}
+
+.session-section .space-y-8 > p:nth-child(1)::after {
+  content: 'Drape runs entirely in the browser, so there is nothing to install, patch, or manage. Open your workspace and start styling immediately from any modern device.';
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.session-section .space-y-8 > p:nth-child(2)::after {
+  content: 'Your collection, generated looks, weekly plans, and saved favourites stay connected to the same workflow, making it easy to move between inspiration, outfit generation, and planning without breaking context.';
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.session-section .space-y-8 > p:nth-child(3)::after {
+  content: 'Because Drape is cloud-based, your workflow is available wherever you need it. Review looks on one device, return later on another, and keep building from the same wardrobe system.';
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.session-section .space-y-8 > p:nth-child(4)::after {
+  content: 'Your styling workflow travels with you.';
+  color: #fff;
+}
+
+.session-section .space-y-8 > p:nth-child(5)::after {
+  content: 'No software downloads. No desktop setup. Just a fast, connected workspace for organizing your collection, generating outfits, and planning what to wear.';
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.session-section .space-y-8 {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+.session-section .space-y-8 > p {
+  margin: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  min-height: 0 !important;
+}
+
+.session-section .space-y-8 > p::after {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.session-section .space-y-8 > p:nth-child(4),
+.session-section .space-y-8 > p:nth-child(5) {
+  display: none !important;
+}
+
+.session-section.session-section--drape h2,
+.session-section.session-section--drape p {
+  position: static !important;
+  color: inherit !important;
+}
+
+.session-section.session-section--drape h2::after,
+.session-section.session-section--drape p::after {
+  content: none !important;
+  display: none !important;
+}
+
+.session-section.session-section--drape .max-w-4xl.mx-auto {
+  max-width: 1100px !important;
+}
+
+.session-section.session-section--drape .drape-session-copy {
+  max-width: 1100px;
+}
+
+.session-section.session-section--drape .drape-session-copy h2 {
+  color: #fff !important;
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 0 0 2.25rem 0 !important;
+}
+
+.session-section.session-section--drape .drape-session-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 1100px;
+}
+
+.session-section.session-section--drape .drape-session-paragraphs p {
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(n + 4) {
+  display: none !important;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(-n + 3) {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(-n + 3) .flex.items-center.gap-3.mb-4 {
+  margin-bottom: 20px !important;
+  min-height: 0 !important;
+  align-items: flex-start !important;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(-n + 3) .flex.items-center.gap-3.mb-4 h3 {
+  display: block !important;
+  width: 100%;
+  height: 72px;
+  margin-bottom: 20px !important;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(-n + 3) .flex.items-center.gap-3.mb-4 h3,
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(-n + 3) p {
+  position: relative;
+  color: transparent !important;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(-n + 3) .flex.items-center.gap-3.mb-4 h3::after,
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(-n + 3) p::after {
+  position: absolute;
+  inset: 0;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(1) .flex.items-center.gap-3.mb-4 h3::after {
+  content: '01';
+  color: #fff;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(1) p::after {
+  content: 'Upload your profile and build your collection with pieces you actually own, so every look starts from your wardrobe.';
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(2) .flex.items-center.gap-3.mb-4 h3::after {
+  content: '02';
+  color: #fff;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(2) p::after {
+  content: 'Select items, speak to Stylist, or prompt Drape directly to generate outfits in the way that feels most natural to you.';
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(3) .flex.items-center.gap-3.mb-4 h3::after {
+  content: '03';
+  color: #fff;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(3) p::after {
+  content: 'Save favourites, preview motion, share standout looks, and turn the best outfits into a plan for the week ahead.';
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.features-grid-section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(-n + 3) p {
+  max-width: 640px;
+  min-height: 5.5rem;
+}
+
+.canvas-preview-section h2,
+.canvas-preview-section p,
+.canvas-preview-section .grid h4,
+.canvas-preview-section .grid p {
+  position: relative;
+  color: transparent !important;
+}
+
+.canvas-preview-section h2::after,
+.canvas-preview-section p::after,
+.canvas-preview-section .grid h4::after,
+.canvas-preview-section .grid p::after {
+  position: absolute;
+  inset: 0;
+}
+
+.canvas-preview-section h2::after {
+  content: 'Hey Drape, style a dinner look from my collection.';
+  color: #0a0a0a;
+}
+
+.canvas-preview-section h2 {
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2.5rem;
+}
+
+.canvas-preview-section h2::before {
+  content: 'Stylist';
+  position: absolute;
+  left: 50%;
+  top: -1.75rem;
+  transform: translateX(-50%);
+  color: #0a0a0a;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.canvas-preview-section > div > p::after {
+  content: 'Drape Stylist responds in real time, looks through your collection, and helps you shape the right outfit before generating the look.';
+  color: rgba(10, 10, 10, 0.55);
+}
+
+.canvas-preview-section .grid > div:nth-child(1) h4::after {
+  content: 'Talk Naturally';
+  color: #0a0a0a;
+}
+
+.canvas-preview-section .grid > div:nth-child(1) p::after {
+  content: 'Ask for dinner looks, work outfits, travel styling, or specific pieces the way you would speak to a personal stylist.';
+  color: rgba(10, 10, 10, 0.55);
+}
+
+.canvas-preview-section .grid > div:nth-child(2) h4::after {
+  content: 'Collection-Aware';
+  color: #0a0a0a;
+}
+
+.canvas-preview-section .grid > div:nth-child(2) p::after {
+  content: 'The Stylist works from the items already in your collection, so recommendations stay grounded in what you actually own.';
+  color: rgba(10, 10, 10, 0.55);
+}
+
+.canvas-preview-section .grid > div:nth-child(3) h4::after {
+  content: 'Refine the Look';
+  color: #0a0a0a;
+}
+
+.canvas-preview-section .grid > div:nth-child(3) p::after {
+  content: 'Adjust the brief as you go. Ask for one item only, change the mood, or shift the setting until the outfit feels right.';
+  color: rgba(10, 10, 10, 0.55);
+}
+
+.canvas-preview-section .grid > div:nth-child(4) h4::after {
+  content: 'Generate on Command';
+  color: #0a0a0a;
+}
+
+.canvas-preview-section .grid > div:nth-child(4) p::after {
+  content: 'When the conversation is done, Drape turns the direction into a generated outfit you can review, save, and build from.';
+  color: rgba(10, 10, 10, 0.55);
+}
+
+.canvas-preview-section .grid.grid-cols-1.md\:grid-cols-4 {
+  margin-top: 2rem !important;
+}
+
+.canvas-preview-section .text-center.mb-20 {
+  margin-bottom: 1rem !important;
+}
+
+.canvas-preview-section .text-center.mb-20 > p {
+  margin-bottom: 0.25rem !important;
+  min-height: 0 !important;
+  line-height: 1 !important;
+  font-size: 0 !important;
+}
+
+.canvas-preview-section .flex.flex-col.items-center {
+  margin-top: 0 !important;
+}
+
+.canvas-preview-section .grid.grid-cols-1.md\:grid-cols-4 {
+  margin-top: 0 !important;
+}
+
+.canvas-preview-section .w-full.max-w-\[1200px\].mx-auto .relative.overflow-hidden.aspect-video img:nth-child(1) {
+  content: url('/slideshow/01.png');
+}
+
+.canvas-preview-section .w-full.max-w-\[1200px\].mx-auto .relative.overflow-hidden.aspect-video img:nth-child(2) {
+  content: url('/slideshow/02.png');
+}
+
+.canvas-preview-section .w-full.max-w-\[1200px\].mx-auto .relative.overflow-hidden.aspect-video img:nth-child(3) {
+  content: url('/slideshow/01.png');
+}
+
+.canvas-preview-section .w-full.max-w-\[1200px\].mx-auto .relative.overflow-hidden.aspect-video img:nth-child(4) {
+  content: url('/slideshow/02.png');
+}
+
+.canvas-preview-section .w-full.max-w-\[1200px\].mx-auto .flex.justify-center.gap-2.mt-6 button:nth-child(n+3) {
+  display: none !important;
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[12932],{12932:(e,k,s)=>{s.r(k),s.d(k,{__iconNode:()=>a,default:()=>c});var o=s(55129);let a=[["polygon",{points:"19 20 9 12 19 4 19 20",key:"o2sva"}],["line",{x1:"5",x2:"5",y1:"19",y2:"5",key:"1ocqjk"}]],c=(0,o.A)("skip-back",a)}}]);

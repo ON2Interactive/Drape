@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[5581],{5581:(e,c,s)=>{s.r(c),s.d(c,{__iconNode:()=>k,default:()=>u});var a=s(55129);let k=[["path",{d:"M12 3c7.2 0 9 1.8 9 9s-1.8 9-9 9-9-1.8-9-9 1.8-9 9-9",key:"garfkc"}]],u=(0,a.A)("squircle",k)}}]);

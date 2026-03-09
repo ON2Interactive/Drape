@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[33918],{33918:(e,h,t)=>{t.r(h),t.d(h,{__iconNode:()=>d,default:()=>k});var a=t(55129);let d=[["path",{d:"m10 9-3 3 3 3",key:"1oro0q"}],["path",{d:"m14 15 3-3-3-3",key:"bz13h7"}],["rect",{x:"3",y:"3",width:"18",height:"18",rx:"2",key:"h1oib"}]],k=(0,a.A)("square-code",d)}}]);

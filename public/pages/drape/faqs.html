@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drape FAQs</title>
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/pages/drape/drape-logo-override.css" />
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #000;
+        color: #fff;
+      }
+      a { color: inherit; text-decoration: none; }
+      .page { min-height: 100vh; display: flex; flex-direction: column; }
+      .main {
+        flex: 1;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 200px 20px 96px;
+      }
+      .main h1 {
+        margin: 0 0 40px;
+        font-size: 48px;
+        line-height: 1.05;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+      }
+      .faq-list { display: grid; gap: 48px; }
+      .faq h2 {
+        margin: 0 0 12px;
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+      .faq p {
+        margin: 0;
+        color: rgba(255,255,255,0.5);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .faq a {
+        text-decoration: underline;
+        transition: color 0.2s ease;
+      }
+      .faq a:hover { color: #fff; }
+      .landing-footer-logo { width: 60px; height: auto; }
+      @media (max-width: 768px) {
+        .main { padding-top: 168px; }
+        .main h1 { font-size: 40px; }
+        .faq h2 { font-size: 20px; }
+        .faq p { font-size: 15px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="common-pill-nav-wrap">
+      <div class="common-pill-nav">
+        <a href="/" class="common-pill-nav-brand" aria-label="Drape home">
+          <img src="/drape-logo.svg" alt="Drape" class="common-pill-nav-logo" />
+        </a>
+        <nav class="common-pill-nav-links">
+          <a href="/pages/drape/pricing.html">Pricing</a>
+          <a href="/pages/drape/faqs.html">FAQs</a>
+          <a href="/pages/drape/contact.html">Contact</a>
+        </nav>
+        <a class="common-pill-nav-cta" href="/pages/drape/signup.html">Get Started</a>
+      </div>
+    </header>
+
+    <div class="page">
+      <main class="main">
+        <h1>FAQs</h1>
+        <section class="faq-list">
+          <article class="faq">
+            <h2>What is Drape?</h2>
+            <p>Drape is an AI fashion styling workspace that helps you build a wardrobe collection, generate looks, plan outfits for the week, and get live styling guidance from your Stylist. It runs in the browser, so there is nothing to install.</p>
+          </article>
+          <article class="faq">
+            <h2>How does Drape work?</h2>
+            <p>You upload a profile image, add pieces from your wardrobe or collection, and use Drape to create outfits in multiple ways. You can try on selected items, generate looks from prompts, ask the Stylist for recommendations, preview looks as video, and save favourites for later.</p>
+          </article>
+          <article class="faq">
+            <h2>What can I do inside Drape?</h2>
+            <p>Drape supports Intelligent Try On, Drape Remix for alternate scenes and environments, Drape Prompt for guided look generation from selected pieces, Drape Stylist for live outfit recommendations, Drape Plan for weekly outfit planning, video preview, favourites, sharing, and downloads.</p>
+          </article>
+          <article class="faq">
+            <h2>Do I need to install anything?</h2>
+            <p>No. Drape runs entirely in the browser. Open your workspace, upload your collection, and start styling.</p>
+          </article>
+          <article class="faq">
+            <h2>Does Drape save my work automatically?</h2>
+            <p>Yes. Your collection, favourites, videos, and weekly plan are designed to persist so you can refresh the browser and continue where you left off. Some assets are stored locally in the browser to keep the workspace responsive.</p>
+          </article>
+          <article class="faq">
+            <h2>How does pricing work?</h2>
+            <p>Drape pricing details are available on the <a href="/pages/drape/pricing.html">Pricing</a> page. Plans are designed to give you access to styling, generation, and export features in one workflow.</p>
+          </article>
+          <article class="faq">
+            <h2>How does the Drape subscription work?</h2>
+            <p>Drape uses a subscription model rather than a credit-based workflow. Your plan gives you access to the styling workspace, wardrobe management, look generation features, and related tools included with your subscription.</p>
+          </article>
+          <article class="faq">
+            <h2>Do I need to manage credits or top-ups?</h2>
+            <p>No. Drape is designed around a subscription model, so you do not need to track credits or purchase top-ups as part of the core experience.</p>
+          </article>
+          <article class="faq">
+            <h2>What is Nano Banana 2?</h2>
+            <p>Nano Banana 2 is the image generation model used inside Drape for core fashion image generation tasks, including look creation, try-on flows, and certain styling outputs.</p>
+          </article>
+          <article class="faq">
+            <h2>What is Drape Stylist?</h2>
+            <p>Drape Stylist is a live assistant that can review the items in your collection, discuss what you want to wear, recommend combinations, and generate a look based on your direction.</p>
+          </article>
+          <article class="faq">
+            <h2>What is Drape Plan?</h2>
+            <p>Drape Plan builds a weekly outfit plan from your collection so you can map looks across the week. It is designed to help reduce repetition and turn saved pieces into a practical wearing schedule.</p>
+          </article>
+          <article class="faq">
+            <h2>Can I save, download, or share looks?</h2>
+            <p>Yes. Generated looks can be saved to favourites, downloaded, and shared. Video previews can also be saved and downloaded.</p>
+          </article>
+          <article class="faq">
+            <h2>Can I use Drape across devices?</h2>
+            <p>Yes. Drape is cloud-based and browser-first, so you can open the workspace from different devices and continue working with the same wardrobe system.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="landing-footer">
+        <div class="landing-footer-grid"></div>
+        <div class="landing-footer-content">
+          <a href="/" class="landing-footer-logo-link">
+            <img src="/drape-logo.svg" alt="Drape" class="landing-footer-logo" />
+          </a>
+          <nav class="landing-footer-nav">
+            <a href="/pages/drape/signup.html">Sign Up</a>
+            <a href="/pages/drape/pricing.html">Pricing</a>
+            <a href="/pages/drape/faqs.html">FAQs</a>
+            <a href="/pages/drape/blog.html">Blog</a>
+            <a href="/pages/drape/help.html">Help</a>
+            <a href="/pages/drape/contact.html">Contact</a>
+            <a href="/pages/drape/privacy.html">Privacy</a>
+            <a href="/pages/drape/terms.html">Terms</a>
+          </nav>
+          <div class="landing-footer-copy">© 2026 Drape. All rights reserved.</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

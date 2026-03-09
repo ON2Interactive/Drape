@@ -1,0 +1,113 @@
+.collection-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+.category-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.category-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.01rem;
+    color: var(--text-secondary);
+    padding-left: 0.25rem;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 60px);
+    gap: 12px;
+}
+
+.clothing-thumbnail {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    cursor: pointer;
+    background: var(--bg-tertiary);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clothing-thumbnail:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.clothing-thumbnail.selected {
+    border-color: var(--text-primary);
+    transform: translateY(-1px) scale(1.06);
+    z-index: 2;
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.2),
+        0 0 18px rgba(255, 255, 255, 0.25),
+        0 6px 16px rgba(0, 0, 0, 0.55);
+}
+
+.clothing-thumbnail.selected::after {
+    content: "✓";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    color: #000000;
+    font-size: 10px;
+    font-weight: 700;
+    z-index: 4;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+.clothing-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    /* Slightly inner to the container's border */
+}
+
+.remove-thumb-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 5;
+    padding: 0;
+}
+
+.remove-thumb-btn:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.collection-empty {
+    padding: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+}

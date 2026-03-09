@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8096],{8096:(e,n,o)=>{o.r(n),o.d(n,{__iconNode:()=>s,default:()=>i});var p=o(55129);let s=[["polygon",{points:"11 19 2 12 11 5 11 19",key:"14yba5"}],["polygon",{points:"22 19 13 12 22 5 22 19",key:"1pi1cj"}]],i=(0,p.A)("rewind",s)}}]);

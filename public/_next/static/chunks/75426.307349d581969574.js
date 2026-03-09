@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[75426],{75426:(e,c,h)=>{h.r(c),h.d(c,{__iconNode:()=>a,default:()=>k});var t=h(55129);let a=[["rect",{width:"14",height:"14",x:"8",y:"8",rx:"2",ry:"2",key:"17jyea"}],["path",{d:"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2",key:"zix9uf"}]],k=(0,t.A)("copy",a)}}]);

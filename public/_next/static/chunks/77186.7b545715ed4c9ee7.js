@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[77186],{77186:(e,l,a)=>{a.r(l),a.d(l,{__iconNode:()=>f,default:()=>r});var t=a(55129);let f=[["path",{d:"M17 22V2L7 7l10 5",key:"1rmf0r"}]],r=(0,t.A)("flag-triangle-left",f)}}]);

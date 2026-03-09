@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[80954],{80954:(e,c,t)=>{t.r(c),t.d(c,{__iconNode:()=>h,default:()=>i});var r=t(55129);let h=[["rect",{width:"18",height:"18",x:"3",y:"3",rx:"2",key:"afitv7"}],["circle",{cx:"12",cy:"12",r:"1",key:"41hilf"}]],i=(0,r.A)("square-dot",h)}}]);
