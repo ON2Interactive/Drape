@@ -183,13 +183,36 @@
         const btn = document.getElementById("google-signin");
         if (!btn) return;
 
+        async function pickAuthBaseUrl() {
+          const preferred = (window.__DRAPE_SUPABASE_AUTH_URL__ || "https://auth.drape.cloud").replace(/\/$/, "");
+          const fallback = "https://vfjdkepgldphzahqerdu.supabase.co";
+
+          // If a custom auth domain is not active yet (DNS/SSL propagation), fallback automatically.
+          try {
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 1500);
+            const res = await fetch(`${preferred}/auth/v1/health`, {
+              method: "GET",
+              signal: controller.signal,
+            });
+            clearTimeout(timeout);
+            if (res.ok) return preferred;
+          } catch (_) {
+            // noop: fallback below
+          }
+
+          return fallback;
+        }
+
         btn.addEventListener("click", function (e) {
           e.preventDefault();
-          const supabaseAuthUrl = (window.__DRAPE_SUPABASE_AUTH_URL__ || "https://auth.drape.cloud").replace(/\/$/, "");
-          const next = "/?workspace=1";
-          const redirectTo = `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}`;
-          const authUrl = `${supabaseAuthUrl}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(redirectTo)}`;
-          window.location.assign(authUrl);
+          (async () => {
+            const supabaseAuthUrl = await pickAuthBaseUrl();
+            const next = "/?workspace=1";
+            const redirectTo = `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}`;
+            const authUrl = `${supabaseAuthUrl}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(redirectTo)}`;
+            window.location.assign(authUrl);
+          })();
         });
       })();
     </script>
