@@ -185,10 +185,10 @@
 
         btn.addEventListener("click", function (e) {
           e.preventDefault();
-          const supabaseUrl = "https://vfjdkepgldphzahqerdu.supabase.co";
+          const supabaseAuthUrl = (window.__DRAPE_SUPABASE_AUTH_URL__ || "https://auth.drape.cloud").replace(/\/$/, "");
           const next = "/?workspace=1";
           const redirectTo = `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}`;
-          const authUrl = `${supabaseUrl}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(redirectTo)}`;
+          const authUrl = `${supabaseAuthUrl}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(redirectTo)}`;
           window.location.assign(authUrl);
         });
       })();
