@@ -9,7 +9,7 @@ function SignupInner() {
     const searchParams = useSearchParams();
     const hasError = searchParams.get("error") === "auth";
 
-    const next = searchParams.get("next") ?? "/workspace";
+    const next = searchParams.get("next") ?? "/?workspace=1";
 
     const handleGoogleSignIn = async () => {
         const supabase = createClient();

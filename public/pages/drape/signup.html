@@ -161,7 +161,7 @@
           <h1 class="signup-title">Get started</h1>
           <p class="signup-copy">Sign up or sign in with your Google account.</p>
 
-          <a class="signup-button" href="/">
+          <a class="signup-button" href="#" id="google-signin">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
@@ -178,5 +178,20 @@
         </div>
       </main>
     </div>
+    <script>
+      (function () {
+        const btn = document.getElementById("google-signin");
+        if (!btn) return;
+
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          const supabaseUrl = "https://vfjdkepgldphzahqerdu.supabase.co";
+          const next = "/?workspace=1";
+          const redirectTo = `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}`;
+          const authUrl = `${supabaseUrl}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(redirectTo)}`;
+          window.location.assign(authUrl);
+        });
+      })();
+    </script>
   </body>
 </html>
