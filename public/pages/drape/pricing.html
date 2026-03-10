@@ -112,8 +112,8 @@
       .topup {
         margin: 0 0 32px;
         font-size: 14px;
-        font-weight: 700;
-        color: #fff;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.5);
       }
 
       .features {
@@ -143,6 +143,7 @@
       }
 
       .card-action button {
+        display: inline-block;
         border: 0;
         background: transparent;
         color: #fff;
@@ -154,6 +155,22 @@
       }
 
       .card-action button:hover {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .card-action a {
+        display: inline-block;
+        border: 0;
+        background: transparent;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        cursor: pointer;
+        transition: color 0.2s ease;
+      }
+
+      .card-action a:hover {
         color: rgba(255, 255, 255, 0.7);
       }
 
@@ -226,6 +243,12 @@
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
+
+      @media (min-width: 1280px) {
+        .cards {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
     </style>
   </head>
   <body>
@@ -246,49 +269,67 @@
       <main class="main">
         <header class="header">
           <h1>Pricing</h1>
-          <p>One simple subscription unlocks AI tools and export. Add extra credits only when you need them.</p>
+          <p>Choose the tier that matches your workflow. Upgrade anytime as your styling needs grow.</p>
         </header>
 
         <section class="cards">
           <article class="card">
             <div>
-              <h2>Drape Pro</h2>
+              <h2>Drape Starter</h2>
               <div class="price-row">
-                <span class="amount">$24.99</span>
+                <span class="amount">$19.99</span>
                 <span class="term">/month</span>
               </div>
-              <p class="topup">Credits top-up: $10 for 100 credits</p>
+              <p class="topup">Billed monthly</p>
               <ul class="features">
-                <li>Subscription includes 200 credits every month</li>
-                <li>AI sites/slides cost 10, pages 5, and visuals 2 credits</li>
-                <li>Export to HTML, PDF, and images included with subscription</li>
-                <li>Buy extra credits separately any time</li>
+                <li>30 generations per month</li>
+                <li>Weekly Plan</li>
               </ul>
-              <p class="note">Free trial includes 15 credits. Subscribe to unlock full AI generation limits and unlimited exports.</p>
+              <p class="note">&nbsp;</p>
             </div>
             <div class="card-action">
-              <button type="button">Subscribe</button>
+              <a href="/pages/drape/signup.html">Get Started</a>
             </div>
           </article>
 
           <article class="card">
             <div>
-              <h2>Drape Teams</h2>
+              <h2>Drape Standard</h2>
               <div class="price-row">
-                <span class="amount">$24.99</span>
+                <span class="amount">$29.99</span>
                 <span class="term">/month</span>
               </div>
-              <p class="topup">Credits top-up: $10 for 100 credits</p>
+              <p class="topup">Billed monthly</p>
               <ul class="features">
-                <li>Subscription includes 200 credits every month</li>
-                <li>AI sites/slides cost 10, pages 5, and visuals 2 credits</li>
-                <li>Export to HTML, PDF, and images included with subscription</li>
-                <li>Buy extra credits separately any time</li>
+                <li>60 generations per month</li>
+                <li>Weekly Plan</li>
+                <li>Video Generation</li>
               </ul>
-              <p class="note">Free trial includes 15 credits. Subscribe to unlock full AI generation limits and unlimited exports.</p>
+              <p class="note">&nbsp;</p>
             </div>
             <div class="card-action">
-              <button type="button">Subscribe</button>
+              <a href="/pages/drape/signup.html">Get Started</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div>
+              <h2>Drape Pro</h2>
+              <div class="price-row">
+                <span class="amount">$49.99</span>
+                <span class="term">/month</span>
+              </div>
+              <p class="topup">Billed monthly</p>
+              <ul class="features">
+                <li>Unlimited generations per month</li>
+                <li>Weekly Plan</li>
+                <li>Video Generation</li>
+                <li>Stylist</li>
+              </ul>
+              <p class="note">Unlimited usage is subject to fair-use limits to ensure stable performance for all users.</p>
+            </div>
+            <div class="card-action">
+              <a href="/pages/drape/signup.html">Get Started</a>
             </div>
           </article>
         </section>
